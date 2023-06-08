@@ -9,4 +9,13 @@
 <body>
     <h1>This is HomePage</h1>
 </body>
+<script>
+    let socket = null;
+    document.addEventListener("DOMContentLoaded", function(){
+        socket = new WebSocket("ws://127.0.0.1:7070/ws");
+        socket.onopen = () =>{
+            console.log("Successfull Connected ")
+        }
+    })
+</script>
 </html>
